@@ -1,50 +1,137 @@
-# React + TypeScript + Vite
+# Expensify - Personal Finance App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+The Personal Finance App is a web application designed to help you manage and track your expenses and income. It provides an intuitive interface to add, view, and analyze your financial transactions, along with features for generating reports and tracking balances.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
 
-## Expanding the ESLint configuration
+- **Frontend**:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+  - [React](https://reactjs.org/): A JavaScript library for building user interfaces.
+  - [TypeScript](https://www.typescriptlang.org/): A typed superset of JavaScript.
+  - [Redux Toolkit](https://redux-toolkit.js.org/): A library for managing global state.
+  - [React Router](https://reactrouter.com/): For client-side routing.
+  - [Vercel](https://vercel.com/): For deploying the frontend.
 
-- Configure the top-level `parserOptions` property like this:
+- **Backend**:
+  - [Node.js](https://nodejs.org/): JavaScript runtime for building the server.
+  - [Express](https://expressjs.com/): Web application framework for Node.js.
+  - [TypeScript](https://www.typescriptlang.org/): For type safety in the backend.
+  - [Prisma](https://www.prisma.io/): ORM for interacting with the database.
+  - [PostgreSQL](https://www.postgresql.org/): Relational database for storing financial data.
+  - [Heroku](https://www.heroku.com/): For deploying the backend.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Features
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **Dashboard**:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+  - Overview of total income, total expenses, and current balance.
+  - Basic breakdown of financial data.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Expenses Management**:
+
+  - Add, view, and categorize expenses.
+  - List of past expenses with sorting and filtering options.
+
+- **Income Management**:
+
+  - Add, view, and categorize income.
+  - List of past income transactions.
+
+- **Reports** (Upcoming):
+  - Generate simple reports showing income vs. expenses.
+  - Visualize data with charts and graphs.
+
+## Milestones
+
+### Phase 1: Core Features (MVP)
+
+- [ ] Setup project repository and initial configuration.
+- [ ] Develop frontend layout with static header, footer, and sidebar.
+- [ ] Implement basic pages: Dashboard, Expenses, Income.
+- [ ] Set up Redux for state management.
+- [ ] Create API endpoints for adding and retrieving expenses and income.
+- [ ] Connect frontend to backend API.
+- [ ] Deploy frontend and backend.
+
+### Phase 2: Enhancements
+
+- [ ] Implement form validation and error handling.
+- [ ] Add advanced filtering and sorting options.
+- [ ] Develop dynamic reports and integrate charts.
+- [ ] Add user authentication (JWT-based).
+
+### Phase 3: Advanced Features
+
+- [ ] Support for recurring transactions.
+- [ ] Manage multiple financial accounts.
+- [ ] Data export functionality (CSV/Excel).
+- [ ] Integration with external bank services (optional).
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js and npm installed on your local machine.
+- PostgreSQL database set up (locally or remotely).
+
+### Installation
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/yourusername/expensify.git
+   ```
+
+2. **Install frontend dependencies**:
+
+   ```bash
+   cd expensify/frontend
+   npm install
+   ```
+
+3. **Install backend dependencies**:
+
+   ```bash
+   cd ../backend
+   npm install
+   ```
+
+4. **Set up environment variables**:
+
+   - Create a `.env` file in both `/frontend` and `/backend` directories and add necessary environment variables (e.g., API URLs, database credentials).
+
+5. **Run the development server**:
+
+   - For frontend:
+     ```bash
+     cd ../frontend
+     npm start
+     ```
+   - For backend:
+     ```bash
+     cd ../backend
+     npm start
+     ```
+
+6. **Access the app**:
+   - Open your browser and navigate to `http://localhost:3000` for the frontend.
+   - Ensure the backend is running at `http://localhost:5000` or your configured port.
+
+## Deployment
+
+- **Frontend**: Deployed on [Vercel](https://vercel.com/).
+- **Backend**: Deployed on [Heroku](https://www.heroku.com/).
+
+## Contributing
+
+As this is a personal project, contributions are not currently accepted. However, feedback and suggestions are welcome.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions or feedback, you can reach me at [1pedrotomas1@gmail.com](mailto:1pedrotomas1@gmail.com).
