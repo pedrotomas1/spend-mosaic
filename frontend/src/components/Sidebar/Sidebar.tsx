@@ -1,25 +1,33 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+  const styles =
+    "w-auto text-center text-sky-500 p-4 border-b border-secondary text-xl cursor-pointer hover:bg-secondary hover:text-white uppercase";
+
+  const handleClick = (path: string) => {
+    navigate(path);
+  };
+  
   return (
-    <aside className="border-r border-secondary w-64 p-4">
+    <aside className="border-r border-secondary w-64 ">
       <nav>
-        <ul>
-          <li>
-            <Link to="/">Dashboard</Link>
+        <ul className="">
+          <li className={styles} onClick={() => handleClick('/')}>
+            <h1>Dasboard</h1>
           </li>
-          <li>
-            <Link to="/expenses">Expenses</Link>
+          <li className={styles} onClick={() => handleClick('/expenses')}>
+            <h1>Expenses</h1>
           </li>
-          <li>
-            <Link to="/income">Income</Link>
+          <li className={styles} onClick={() => handleClick('/income')}>
+            <h1>Income</h1>
           </li>
-          <li>
-            <Link to="/reports">Reports</Link>
+          <li className={styles} onClick={() => handleClick('/reports')}>
+            <h1>Reports</h1>
           </li>
-          <li>
-            <Link to="/settings">Settings</Link>
+          <li className={styles} onClick={() => handleClick('/settings')}>
+            <h1>Settings</h1>
           </li>
         </ul>
       </nav>
