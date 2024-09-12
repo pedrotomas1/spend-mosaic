@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Root } from "./pages/Root";
@@ -7,6 +7,7 @@ import { ExpensesPage } from "./pages/ExpensesPage";
 import { IncomePage } from "./pages/IncomePage";
 import { ReportsPage } from "./pages/ReportsPage";
 import { SettingsPage } from "./pages/SettingsPage";
+import { Pages } from "./pages/Root";
 
 const router = createBrowserRouter([
   {
@@ -18,19 +19,19 @@ const router = createBrowserRouter([
         element: <DashboardPage />,
       },
       {
-        path: "expenses",
+        path: Pages.EXPENSES,
         element: <ExpensesPage />,
       },
       {
-        path: "income",
+        path: Pages.INCOME,
         element: <IncomePage />,
       },
       {
-        path: "reports",
+        path: Pages.REPORTS,
         element: <ReportsPage />,
       },
       {
-        path: "settings",
+        path: Pages.SETTINGS,
         element: <SettingsPage />,
       },
     ],
