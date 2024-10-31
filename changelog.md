@@ -9,6 +9,11 @@ All notable changes to this project will be documented in this file. The format 
 - Initial project setup.
 - Basic frontend and backend integration.
 
+## [0.1.1] - 2024-10-31
+
+- Fix backend not starting - update package.json
+- Rename app - change all references to prior name of the app
+
 ## [0.1.0] - 2024-07-01
 
 ### Added
