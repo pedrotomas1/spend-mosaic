@@ -1,7 +1,7 @@
 {
-  "name": "expensify",
+  "name": "spend-mosaic",
   "version": "0.1.0",
   "dependencies": {
-    "expensify": "file:"
+    "spend-mosaic": "file:"
   }
 }
