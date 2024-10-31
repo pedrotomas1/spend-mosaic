@@ -1,4 +1,4 @@
-# Expensify - Personal Finance App
+# Spend Mosaic - Personal Finance App
 
 ## Overview
 
@@ -81,13 +81,13 @@ The Personal Finance App is a web application designed to help you manage and tr
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/expensify.git
+   git clone https://github.com/yourusername/spend-mosaic.git
    ```
 
 2. **Install frontend dependencies**:
 
    ```bash
-   cd expensify/frontend
+   cd spend-mosaic/frontend
    npm install
    ```
 
@@ -107,7 +107,7 @@ The Personal Finance App is a web application designed to help you manage and tr
    - For frontend:
      ```bash
      cd ../frontend
-     npm start
+     npm run dev
      ```
    - For backend:
      ```bash
