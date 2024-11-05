@@ -47,11 +47,11 @@ The Personal Finance App is a web application designed to help you manage and tr
 
 ### Phase 1: Core Features (MVP)
 
-- [ ] Setup project repository and initial configuration.
-- [ ] Develop frontend layout with static header, footer, and sidebar.
-- [ ] Implement basic pages: Dashboard, Expenses, Income.
+- [x] Setup project repository and initial configuration.
+- [x] Develop frontend layout with static header, footer, and sidebar.
+- [x] Implement basic pages with React router: Dashboard, Expenses, Income.
 - [ ] Set up Redux for state management.
-- [ ] Create API endpoints for adding and retrieving expenses and income.
+- [x] Create API endpoints for adding and retrieving expenses and income.
 - [ ] Connect frontend to backend API.
 - [ ] Deploy frontend and backend.
 
@@ -112,11 +112,11 @@ The Personal Finance App is a web application designed to help you manage and tr
    - For backend:
      ```bash
      cd ../backend
-     npm start
+     npm run dev
      ```
 
 6. **Access the app**:
-   - Open your browser and navigate to `http://localhost:3000` for the frontend.
+   - Open your browser and navigate to `http://localhost:5173` for the frontend.
    - Ensure the backend is running at `http://localhost:5000` or your configured port.
 
 ## Deployment
