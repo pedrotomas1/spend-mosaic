@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file. The format 
 - Setup basic CRUD operations for expenses.
 - Initial project setup.
 - Basic frontend and backend integration.
+- Add base app layout.
 
 ## [0.1.1] - 2024-10-31
 
