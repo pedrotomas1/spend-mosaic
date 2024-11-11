@@ -1,9 +1,38 @@
 const express = require("express");
+require("dotenv").config();
+
+console.log("Database dialect:", process.env.DB_DIALECT);
 
 const app = express();
 const port = 5000;
 
 app.use(express.json());
+const sequelize = require("./config/database");
+const Expense = require("./models/Expense");
+
+sequelize
+  .sync({ alter: true })
+  .then(() => {
+    console.log("Database synced!");
+    // Start your server here
+  })
+  .catch((err) => {
+    console.error("Failed to sync database:", err);
+  });
+
+Expense.create({
+  name: "Groceries",
+  amount: 50.75,
+  category: "Food",
+  description: "buy food for the week",
+  date: new Date(),
+})
+  .then((expense) => {
+    console.log("New expense created:", expense.toJSON());
+  })
+  .catch((error) => {
+    console.error("Error creating expense:", error);
+  });
 
 let expenses = [];
 let idCounter = 1;
