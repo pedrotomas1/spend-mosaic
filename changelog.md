@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Added
 
+- Add database connection and persistence for CRUD operations in expenses.
 - Add routing
 - Setup basic CRUD operations for expenses.
 - Initial project setup.
