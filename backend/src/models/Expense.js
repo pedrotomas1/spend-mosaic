@@ -7,21 +7,21 @@ const Expense = sequelize.define("Expense", {
     primaryKey: true,
     autoIncrement: true,
   },
-  name: {
-    type: DataTypes.STRING,
-    allowNull: false,
+  date: {
+    type: DataTypes.DATE,
+    defaultValue: DataTypes.NOW,
   },
   amount: {
     type: DataTypes.FLOAT,
     allowNull: false,
   },
-  description: {
-    type: DataTypes.CHAR,
-    defaultValue: "",
+  category: {
+    type: DataTypes.STRING,
+    allowNull: false,
   },
-  date: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
+  memo: {
+    type: DataTypes.STRING,
+    defaultValue: "",
   },
 });
 
