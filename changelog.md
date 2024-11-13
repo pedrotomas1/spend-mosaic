@@ -4,10 +4,23 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+## [0.1.3] - 2024-11-13
+
 ### Added
 
-- Add database connection and persistence for CRUD operations in expenses.
-- Add routing
+- Added PostgreSQL database support using Sequelize ORM
+- Refactored backend to a modular structure with:
+  - Separate routes for each resource type
+  - Controllers to handle CRUD operations
+- Updated server startup to wait for successful database synchronization before listening to requests
+- Implemented .env file for managing sensitive database connection settings
+
+Note: Database must be run separately from the project, with the connection managed through environment variables
+
+## [0.1.2] - 2024-11-5
+
+### Added
+
 - Setup basic CRUD operations for expenses.
 - Initial project setup.
 - Basic frontend and backend integration.

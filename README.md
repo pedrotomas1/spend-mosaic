@@ -15,12 +15,37 @@ The Personal Finance App is a web application designed to help you manage and tr
   - [Vercel](https://vercel.com/): For deploying the frontend.
 
 - **Backend**:
+
   - [Node.js](https://nodejs.org/): JavaScript runtime for building the server.
   - [Express](https://expressjs.com/): Web application framework for Node.js.
   - [TypeScript](https://www.typescriptlang.org/): For type safety in the backend.
   - [Prisma](https://www.prisma.io/): ORM for interacting with the database.
   - [PostgreSQL](https://www.postgresql.org/): Relational database for storing financial data.
   - [Heroku](https://www.heroku.com/): For deploying the backend.
+
+- **Database Connection**
+
+  This project now uses a [PostgreSQL](https://www.postgresql.org/) database to store expense records. The connection to PostgreSQL has been configured using Sequelize, an ORM (Object-Relational Mapper) for Node.js, to facilitate the interaction with the database.
+
+  For now, the PostgreSQL database is run separately from the project, so make sure you have a PostgreSQL instance running and properly configured before starting the server.
+
+  _Setup Instructions_:
+
+  Install PostgreSQL and create a new database (you can name it according to your preference, e.g., finmosaic_dev).
+
+  Ensure that you have set up environment variables in a .env file at the project’s root to manage database credentials and connection settings:
+
+  ```
+  DB_HOST=your_database_host
+  DB_USER=your_database_user
+  DB_PASSWORD=your_database_password
+  DB_NAME=your_database_name
+  DB_PORT=your_database_port
+  ```
+
+  Run the app with npm start (or node server.js). The server will attempt to connect to the PostgreSQL database when it starts.
+
+  If you’re using pgAdmin4 or any other database client, you can inspect the tables and records created by Sequelize under the specified database.
 
 ## Features
 
