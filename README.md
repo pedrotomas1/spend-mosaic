@@ -94,6 +94,19 @@ The Personal Finance App is a web application designed to help you manage and tr
 - [ ] Data export functionality (CSV/Excel).
 - [ ] Integration with external bank services (optional).
 
+## Project Structure
+
+This project uses **npm workspaces** to manage a monorepo with two independent applications:
+- `backend/`: Express.js server with Node.js
+- `frontend/`: React + TypeScript web application
+
+### Why Workspaces?
+
+Workspaces simplify dependency management by:
+- Installing all dependencies from the repository root with a single `npm install`
+- Running scripts for individual apps without navigating between directories
+- Keeping a single, centralized `package-lock.json` for consistency
+
 ## Getting Started
 
 ### Prerequisites
@@ -107,40 +120,49 @@ The Personal Finance App is a web application designed to help you manage and tr
 
    ```bash
    git clone https://github.com/yourusername/spend-mosaic.git
+   cd spend-mosaic
    ```
 
-2. **Install frontend dependencies**:
+2. **Install all dependencies** (from repository root):
 
    ```bash
-   cd spend-mosaic/frontend
    npm install
    ```
 
-3. **Install backend dependencies**:
+   This command automatically installs dependencies for both `backend/` and `frontend/` workspaces.
 
-   ```bash
-   cd ../backend
-   npm install
-   ```
+3. **Set up environment variables**:
 
-4. **Set up environment variables**:
-
-   - Create a `.env` file in both `/frontend` and `/backend` directories and add necessary environment variables (e.g., API URLs, database credentials).
-
-5. **Run the development server**:
-
-   - For frontend:
-     ```bash
-     cd ../frontend
-     npm run dev
+   - Create a `.env` file in the `/backend` directory with database credentials:
      ```
-   - For backend:
+     DB_HOST=your_database_host
+     DB_USER=your_database_user
+     DB_PASSWORD=your_database_password
+     DB_NAME=your_database_name
+     DB_PORT=your_database_port
+     ```
+   - Create a `.env` file in the `/frontend` directory with any API configuration if needed.
+
+4. **Run the development server**:
+
+   - For frontend only:
      ```bash
-     cd ../backend
-     npm run dev
+     npm run dev:frontend
+     ```
+   - For backend only:
+     ```bash
+     npm run dev:backend
+     ```
+   - For both (in separate terminals):
+     ```bash
+     # Terminal 1
+     npm run dev:backend
+     
+     # Terminal 2
+     npm run dev:frontend
      ```
 
-6. **Access the app**:
+5. **Access the app**:
    - Open your browser and navigate to `http://localhost:5173` for the frontend.
    - Ensure the backend is running at `http://localhost:5000` or your configured port.
 
