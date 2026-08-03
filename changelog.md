@@ -4,6 +4,29 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+## [0.1.4] - 2026-08-03
+
+### Changed
+
+- Migrated repository dependency management to npm workspaces (`backend` and `frontend`) via the root `package.json`.
+- Added workspace scripts at root level to run app commands without changing directories:
+  - `npm run dev:backend`
+  - `npm run dev:frontend`
+  - `npm run build:frontend`
+- Updated backend `express` from `4.21.1` to `^5.2.1`.
+- Updated frontend `vite` from `^5.4.1` to `^6.4.3`.
+- Refreshed dependency lock data as part of the workspace migration and vulnerability fixes.
+
+### Removed
+
+- Removed invalid self-referential `file:` dependencies from package manifests (`spend-mosaic`, `backend`, `frontend`).
+- Removed workspace-local lockfiles (`backend/package-lock.json` and `frontend/package-lock.json`) in favor of a single root lockfile.
+
+### Security
+
+- Applied dependency and lockfile updates to address npm audit vulnerabilities.
+- Regenerated root lockfile after the Vite upgrade, including updated `esbuild` transitive packages.
+
 ### Changed
 
 - Migrated repository dependency management to npm workspaces (`backend` and `frontend`) via the root `package.json`.
