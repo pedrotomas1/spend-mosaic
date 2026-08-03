@@ -1,7 +1,14 @@
 {
   "name": "spend-mosaic",
   "version": "0.1.0",
-  "dependencies": {
-    "spend-mosaic": "file:"
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev:backend": "npm run dev -w backend",
+    "dev:frontend": "npm run dev -w frontend",
+    "build:frontend": "npm run build -w frontend"
   }
 }
