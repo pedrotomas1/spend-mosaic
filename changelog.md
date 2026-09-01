@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+### Added
+
+- Added repository instructions for GitHub Copilot.
+
+### Security
+
+- Updated locked versions of React Router to 6.30.6 and nanoid to 3.3.18 to address npm audit vulnerabilities.
+
 ## [0.1.4] - 2026-08-03
 
 ### Changed
